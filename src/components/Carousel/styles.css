@@ -1,0 +1,87 @@
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.item-list {
+  list-style: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.item {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s linear;
+}
+
+.first {
+  background-color: #ccccff;
+}
+
+.second {
+  background-color: #ccffcc;
+}
+
+.third {
+  background-color: #ffcccc;
+}
+
+.bar {
+}
+
+.btn {
+  border: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100px;
+  background-color: rgba(100, 100, 100, 0.1);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.radio-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+}
+
+.radio-btn::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color: #000;
+}
+
+.radio-btn.-active::before {
+  background-color: #fff;
+}
+
+.-fade-out {
+  transform: translateX(-100%);
+}
+
+.-hidden {
+  transform: translateX(100%);
+}
